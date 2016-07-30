@@ -3,7 +3,7 @@
      <div id="errors_explaination">
        <p><%= @tweet.errors.count %>件のエラーが発生しました。</p>
          <ul>
-           <%= @tweet.errors.full_messages.each do |message| %>
+           <% @tweet.errors.full_messages.each do |message| %>
            <li><%= message %></li>
            <% end %>
          </ul>
