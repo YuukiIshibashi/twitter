@@ -28,7 +28,7 @@ class TweetsController < ApplicationController
       if @tweet.save
         redirect_to tweets_path, notice: "ツイートしました！"
       else
-        render :new
+        render :index
       end
   end
   
