@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  post 'tweets/new' => 'tweets#new' 
   resources :tweets, only: [:index, :new, :create, :edit, :update, :destroy] do
     collection do
       post :confirm
-      post :index
     end
+    
   end
   
   root 'tweets#index'
